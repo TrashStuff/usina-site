@@ -19,7 +19,7 @@ export default async function Page({
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={metadata.image}
+            src={`${process.env.PAGES_BASE_PATH}/${metadata.image}`}
             alt={metadata.title}
             className="w-full object-cover pointer-events-none saturate-20"
           />

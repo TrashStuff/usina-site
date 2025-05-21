@@ -28,7 +28,7 @@ export default async function Projetos() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={metadata.image}
+              src={`${process.env.PAGES_BASE_PATH}/${metadata.image}`}
               alt={metadata.title}
               className="md:absolute max-h-80 md:max-h-full top-0 left-0 h-full w-full object-cover pointer-events-none saturate-20 z-10 group-hover:opacity-0 transition-opacity"
             />
