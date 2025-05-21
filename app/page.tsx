@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import { NavBar } from "./NavBar";
 import { ScatterText } from "./ScatterText";
 
@@ -19,13 +20,15 @@ export default function Home() {
         <Noise />
       </div>
 
-      <NavBar noHome/>
+      <NavBar currentPage="home" />
 
       <div className="text-slate-100 font-sans text-9xl grow h-screen flex items-center">
         <div className="z-20 text-center">
           <ScatterText>USINA</ScatterText>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

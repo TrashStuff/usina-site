@@ -1,11 +1,33 @@
-import { NavLink } from "./NavLink";
+import Link from "next/link";
+import { ComponentProps } from "react";
 
-export function NavBar({ noHome }: { noHome?: boolean }) {
+export function NavBar({
+  currentPage,
+}: {
+  currentPage: "nos" | "projetos" | "home";
+}) {
   return (
-    <div className="container flex items-center justify-between z-10 my-20 px-5 border-b-2 border-transparent has-hover:border-slate-200">
-      <NavLink href="/projetos">projetos</NavLink>
-      {!noHome && <NavLink href="/">USINA</NavLink>}
-      <NavLink href="/nos">nós</NavLink>
+    <div className="container flex items-center justify-between z-10 my-20 px-5 pb-2 border-b-2 border-slate-200">
+      {currentPage === "projetos" ? (
+        <NavLink href="/">USINA</NavLink>
+      ) : (
+        <NavLink href="/projetos">projetos</NavLink>
+      )}
+
+      {currentPage === "nos" ? (
+        <NavLink href="/">USINA</NavLink>
+      ) : (
+        <NavLink href="/nos">nós</NavLink>
+      )}
     </div>
-  )
+  );
+}
+
+export function NavLink(props: ComponentProps<typeof Link>) {
+  return (
+    <Link
+      className="text-slate-200 font-sans text-lg hover:-rotate-3 hover:text-slate-50 transition-all"
+      {...props}
+    />
+  );
 }
