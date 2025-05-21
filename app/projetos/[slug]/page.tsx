@@ -17,6 +17,7 @@ export default async function Page({
       <NavBar currentPage="projetos" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full pb-10">
         <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={metadata.image}
             alt={metadata.title}
@@ -76,9 +77,9 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const { metadata } = await loadContent(slug);
 

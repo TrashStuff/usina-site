@@ -26,6 +26,7 @@ export default async function Projetos() {
             key={metadata.slug}
             className="grow md:aspect-[3/4] relative group md:bg-white md:flex flex-col justify-between md:p-4 text-slate-900 min-w-[300px]"
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={metadata.image}
               alt={metadata.title}

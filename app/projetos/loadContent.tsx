@@ -1,5 +1,4 @@
 import { MDXContent } from "mdx/types";
-import { ComponentType } from "react";
 
 type Content = {
   Component: MDXContent;
