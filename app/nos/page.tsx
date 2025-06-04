@@ -7,6 +7,7 @@ const nosDescription =
 export const metadata: Metadata = {
   title: "Nós | Usina",
   description: nosDescription,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? ""),
   openGraph: {
     title: "Nós | Usina",
     description: nosDescription,
