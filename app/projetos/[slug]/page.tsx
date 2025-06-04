@@ -14,17 +14,16 @@ export default async function Page({
 
   return (
     <div className="flex flex-col items-center">
-      <NavBar currentPage="projetos" />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full pb-10">
+      <NavBar currentPage="projeto" />
+      <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 w-full pb-10">
         <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`${process.env.PAGES_BASE_PATH}/${metadata.image}`}
+            src={metadata.image}
             alt={metadata.title}
             className="w-full object-cover pointer-events-none saturate-20"
           />
         </div>
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 px-2">
           <div className="flex flex-col justify-between gap-2 w-1/2">
             <div className="flex flex-col gap-2">
               <DataBlock label="Título">{metadata.title}</DataBlock>
@@ -44,7 +43,7 @@ export default async function Page({
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full font-light">
         <Component />
       </div>
     </div>
@@ -61,7 +60,7 @@ function DataBlock({
   return (
     <div className="flex flex-col gap-1">
       <div className="text-xs uppercase font-light">{label}</div>
-      <div className="text-4xl font-light">{children}</div>
+      <div className="text-2xl lg:text-4xl font-light">{children}</div>
     </div>
   );
 }
@@ -84,6 +83,7 @@ export async function generateMetadata({
   const { metadata } = await loadContent(slug);
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? ""),
     title: `${metadata.title} | Usina`,
     description: metadata.descricao,
     openGraph: {

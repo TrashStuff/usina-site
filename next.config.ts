@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   // Optionally, add any other Next.js config below
   output: "export",
   basePath: process.env.PAGES_BASE_PATH,
+  // Image Optimization using the default loader is not compatible with `{ output: 'export' }`
+  images: { unoptimized: true },
 };
  
 const withMDX = createMDX({

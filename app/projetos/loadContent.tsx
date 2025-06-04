@@ -13,6 +13,10 @@ type Content = {
   };
 };
 
+const basePath = process.env.PAGES_BASE_PATH
+  ? `${process.env.PAGES_BASE_PATH}/`
+  : "/";
+
 export async function loadContent(fileName: string) {
   const { default: Component, metadata } = await import(
     `@/content/${fileName}.mdx`
@@ -23,7 +27,7 @@ export async function loadContent(fileName: string) {
     metadata: {
       ...metadata,
       slug: fileName,
-      image: `/content/${metadata.image}`,
+      image: `${basePath}content/${metadata.image}`,
     },
   } as Content;
 }

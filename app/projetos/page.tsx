@@ -26,9 +26,8 @@ export default async function Projetos() {
             key={metadata.slug}
             className="grow md:aspect-[3/4] relative group md:bg-white md:flex flex-col justify-between md:p-4 text-slate-900 min-w-[300px]"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`${process.env.PAGES_BASE_PATH}/${metadata.image}`}
+              src={metadata.image}
               alt={metadata.title}
               className="md:absolute max-h-80 md:max-h-full top-0 left-0 h-full w-full object-cover pointer-events-none saturate-20 z-10 group-hover:opacity-0 transition-opacity"
             />
