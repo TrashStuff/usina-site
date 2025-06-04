@@ -1,5 +1,4 @@
-import copyTextToClipboard from "copy-text-to-clipboard";
-import { InstagramIcon, Mail, YoutubeIcon } from "lucide-react";
+import { InstagramIcon } from "lucide-react";
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { EmailButton } from "./EmailButton";
