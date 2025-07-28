@@ -9,4 +9,4 @@ export const metadata = {
 
 # Conteúdo extra aqui
 
-Pode colocar images com Markdown: ![descricao da imagem](https://imgur.com/gallery/collecting-water-to-fight-wildfires-PArLLHf)
+Pode colocar images com Markdown: ![descricao da imagem](![descricao da imagem](https://i.imgur.com/PArLLHf.jpeg))
