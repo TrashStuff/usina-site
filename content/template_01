@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Bicho azul',
-  tags: ['Direção de arte', 'Som'],
-  cliente: 'Farm',
-  image: 'bicho-azul.jpeg',
-  descricao: 'Um projeto de arte e som para a Farm, uma marca de moda brasileira. O projeto foi desenvolvido em colaboração com a equipe da Farm e envolveu a criação de uma identidade visual única e envolvente.',
-  ano: '2023',
+  title: 'TEMPLATE 01',
+  tags: ['Direção de arte', 'Trilha'],
+  cliente: 'Globo',
+  image: 'teste-avião.jpeg',
+  descricao: 'filme muito legal sobre um avião muito bacana',
+  ano: '2021',
 }
 
-Conteúdo extra aqui
+# Conteúdo extra aqui
 
-Pode colocar images com Markdown: ![descricao da imagem](https://i.imgur.com/F2YAlUi.jpeg)
+Pode colocar images com Markdown: ![descricao da imagem](https://imgur.com/gallery/collecting-water-to-fight-wildfires-PArLLHf)
