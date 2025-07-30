@@ -1,0 +1,10 @@
+export const metadata = {
+  title: 'Previ',
+  tags: ['Desenho de Som', 'Publicidade'],
+  cliente: 'Banco do Brasil',
+  image: 'usina_bb_previx.png',
+  descricao: 'Desenho de som para série de vídeos explicativos sobre o PREVI, fundo previdenciário para funcionários do Banco do Brasil',
+  ano: '2025',
+}
+
+#
