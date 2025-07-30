@@ -1,0 +1,13 @@
+export const metadata = {
+  title: 'Expressões da Resistência: Abdias do Nascimento e Emerson Rocha',
+  tags: ['Desenho de Som', 'TV'],
+  cliente: 'Globo',
+  image: 'usina_globo_resistencia.png',
+  descricao: 'Desenho de som e Mixagem para programa especial da TV Globo',
+  ano: '2025',
+}
+
+# Clique <a href="https://globoplay.globo.com/v/12023623/?s=0s" target="_blank">aqui</a> para assistir
+
+
+Minidocumentário sobre a construção da abertura da série Resistência Negra, do Globoplay.
