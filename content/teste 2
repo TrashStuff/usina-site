@@ -1,0 +1,10 @@
+export const metadata = {
+  title: 'TesTEEE',
+  tags: ['Direção de arte', 'Som'],
+  cliente: 'Farm',
+  image: 'o-cerco.png',
+  descricao: 'Um projeto de arte e som para a Farm, uma marca de moda brasileira. O projeto foi desenvolvido em colaboração com a equipe da Farm e envolveu a criação de uma identidade visual única e envolvente.',
+  ano: '2023',
+}
+
+Experimental sobre a sensação de uma atriz.
