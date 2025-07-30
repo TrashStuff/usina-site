@@ -1,0 +1,12 @@
+export const metadata = {
+  title: 'Bicho azul',
+  tags: ['Direção de arte', 'Som'],
+  cliente: 'Farm',
+  image: 'tucum.png',
+  descricao: 'Um projeto de arte e som para a Farm, uma marca de moda brasileira. O projeto foi desenvolvido em colaboração com a equipe da Farm e envolveu a criação de uma identidade visual única e envolvente.',
+  ano: '2023',
+}
+
+# Conteúdo extra aqui
+
+Pode colocar images com Markdown: ![descricao da imagem](https://i.imgur.com/F2YAlUi.jpeg)
