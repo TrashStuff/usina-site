@@ -2,7 +2,7 @@ import { NavBar } from "../NavBar";
 import { Metadata } from "next";
 
 const nosDescription =
-  "Uma dupla afiada com 15 anos de experiência conjunta, amplificada por uma rede de técnicos e criativos, atuante em diversas áreas: comunicação, arte, e entretenimento, de equipes pequenas à grandes corporações.";
+  "Usina reúne os trabalhos de Hugo Rocha e Miguel Mermelstein em som e música para projetos audiovisuais.";
 
 export const metadata: Metadata = {
   title: "Nós | Usina",
