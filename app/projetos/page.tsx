@@ -24,7 +24,7 @@ export default async function Projetos() {
           <Link
             href={`/projetos/${metadata.slug}`}
             key={metadata.slug}
-            className="grow md:aspect-[3/4] relative group md:bg-white md:flex flex-col justify-between md:p-4 text-slate-900 md:min-w-[300px]"
+            className="grow md:aspect-[3/4] h-full relative group md:bg-white md:flex flex-col justify-between pb-10 md:p-4 text-slate-900 md:min-w-[300px]"
           >
             <img
               src={metadata.image}
@@ -41,10 +41,12 @@ export default async function Projetos() {
                   {metadata.tags.join(", ")}
                 </div>
               </div>
-              <div>
-                <div className="text-sm">Cliente</div>
-                <div className="font-normal">{metadata.cliente}</div>
-              </div>
+              {metadata.cliente && (
+                <div>
+                  <div className="text-sm">Cliente</div>
+                  <div className="font-normal">{metadata.cliente}</div>
+                </div>
+              )}
             </div>
           </Link>
         ))}
