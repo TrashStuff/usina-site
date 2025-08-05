@@ -43,7 +43,7 @@ export default async function Page({
           </div>
         </div>
       </div>
-      <div className="w-full font-light">
+      <div className="font-light px-2 md:px-10 w-full pb-6">
         <Component />
       </div>
     </div>
