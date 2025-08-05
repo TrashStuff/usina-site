@@ -1,17 +1,5 @@
 import { MDXContent } from "mdx/types";
-
-type Content = {
-  Component: MDXContent;
-  metadata: {
-    slug: string;
-    title: string;
-    image: string;
-    tags: string[];
-    cliente: string;
-    ano: string;
-    descricao: string;
-  };
-};
+import { Content } from "./types";
 
 const basePath = process.env.PAGES_BASE_PATH
   ? `${process.env.PAGES_BASE_PATH}/`
@@ -26,6 +14,7 @@ export async function loadContent(fileName: string) {
     Component: Component as MDXContent,
     metadata: {
       ...metadata,
+      prioridade: metadata.prioridade ?? 0,
       slug: fileName,
       image: `${basePath}content/${metadata.image}`,
     },
