@@ -5,10 +5,11 @@ import { Content } from "./types";
 import { useState } from "react";
 
 const categoryMap = {
-  tv: ["Série", "TV", "Animação"],
+  tv: ["TV"],
   publicidade: ["Publicidade"],
   cinema: ["Longa", "Curta"],
-  outro: ["Podcast"],
+  podcast: ["Podcast"],
+  outro: ["Animação", "Série"],
 }
 
 export function ProjectsList({ content }: { content: Omit<Content, 'Component'>[] }) {
@@ -31,6 +32,9 @@ export function ProjectsList({ content }: { content: Omit<Content, 'Component'>[
           </FilterButton>
           <FilterButton onClick={() => setCategory("cinema")}>
             Cinema
+          </FilterButton>
+           <FilterButton onClick={() => setCategory("podcast")}>
+            Podcast
           </FilterButton>
           <FilterButton onClick={() => setCategory("outro")}>
             Outro
