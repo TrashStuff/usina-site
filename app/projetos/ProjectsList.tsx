@@ -87,7 +87,7 @@ function FilterButton({
   onClick: () => void;
 }) {
   return (
-    <button className="text-xl md:text-2xl cursor-pointer underline" onClick={onClick}>
+    <button className="text-lg md:text-lg cursor-pointer" onClick={onClick}>
       {children}
     </button>
   );
