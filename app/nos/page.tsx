@@ -2,7 +2,9 @@ import { NavBar } from "../NavBar";
 import { Metadata } from "next";
 
 const nosDescription =
-  "Usina reúne os trabalhos de Hugo Rocha e Miguel Mermelstein em som e música para projetos audiovisuais. Supervisão de Som - Edição de Som - Mixagem - Trilha Sonora";
+  "Usina reúne os trabalhos de Hugo Rocha e Miguel Mermelstein em som e música para projetos audiovisuais.
+  
+  Supervisão de Som - Edição de Som - Mixagem - Trilha Sonora";
 
 export const metadata: Metadata = {
   title: "Nós | Usina",
