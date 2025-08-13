@@ -7,7 +7,9 @@ export const metadata = {
   ano: '2025',
 }
 
+
 import React, { useEffect } from "react";
+import Script from "next/script";
 
 const InstagramPost = () => {
   useEffect(() => {
@@ -20,21 +22,44 @@ const InstagramPost = () => {
     <>
       <blockquote
         className="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/p/COtQf1EhM2E/"
+        data-instgrm-permalink="https://www.instagram.com/reel/C8ca7_DMurn/?utm_source=ig_embed&utm_campaign=loading"
         data-instgrm-version="14"
         style={{
           background: "#FFF",
           border: 0,
           borderRadius: "3px",
-          boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+          boxShadow:
+            "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
           margin: "1px",
           maxWidth: "540px",
           minWidth: "326px",
           padding: 0,
           width: "99.375%",
         }}
-      ></blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
+      >
+        <div style={{ padding: "16px" }}>
+          <a
+            href="https://www.instagram.com/reel/C8ca7_DMurn/?utm_source=ig_embed&utm_campaign=loading"
+            style={{
+              background: "#FFFFFF",
+              lineHeight: 0,
+              padding: "0 0",
+              textAlign: "center",
+              textDecoration: "none",
+              width: "100%",
+            }}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver esta publicação no Instagram
+          </a>
+        </div>
+      </blockquote>
+
+      <Script
+        src="https://www.instagram.com/embed.js"
+        strategy="lazyOnload"
+      />
     </>
   );
 };
