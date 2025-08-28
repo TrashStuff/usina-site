@@ -33,17 +33,19 @@ export function ProjectsList({ content }: { content: Omit<Content, 'Component'>[
           <FilterButton onClick={() => setCategory("cinema")}>
             Cinema
           </FilterButton>
-           <FilterButton onClick={() => setCategory("podcast")}>
+          <FilterButton onClick={() => setCategory("podcast")}>
             Podcast
           </FilterButton>
           <FilterButton onClick={() => setCategory("outro")}>
             Outro
           </FilterButton>
-          <FilterButton onClick={() => setCategory(null)}>Ver todos</FilterButton>
+          <FilterButton onClick={() => setCategory(null)}>
+            Ver todos
+          </FilterButton>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 w-full gap-y-10 md:gap-y-0">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 w-full gap-y-10 md:gap-y-0">
         {visibleContent.map(({ metadata }) => (
           <Link
             href={`/projetos/${metadata.slug}`}
@@ -55,10 +57,10 @@ export function ProjectsList({ content }: { content: Omit<Content, 'Component'>[
               alt={metadata.title}
               className="md:absolute max-h-80 aspect-[3/4] md:max-h-full top-0 left-0 h-full w-full object-cover pointer-events-none saturate-20 z-10 group-hover:opacity-0 transition-opacity"
             />
-            <h3 className="text-slate-100 md:text-black p-4 md:p-0 text-4xl font-normal">
+            <h3 className="text-slate-100 md:text-black p-4 md:p-0 text-2xl md:text-4xl font-normal">
               {metadata.title}
             </h3>
-            <div className="text-slate-100 md:text-black text-4xl md:text-lg p-4 md:p-0 font-light flex flex-col justify-around gap-4">
+            <div className="text-slate-100 md:text-black text-2xl md:text-lg p-4 md:p-0 font-light flex flex-col justify-around gap-4">
               <div>
                 <div className="text-sm">Atividade</div>
                 <div className="text-pretty truncate">
