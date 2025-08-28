@@ -7,19 +7,6 @@ export const metadata = {
   ano: '2025',
 }
 
-
-import React, { useEffect } from "react";
-import Script from "next/script";
-
-const InstagramPost = () => {
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-  }, []);
-
-  return (
-    <>
       <blockquote
         className="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/reel/C8ca7_DMurn/?utm_source=ig_embed&utm_campaign=loading"
@@ -56,12 +43,3 @@ const InstagramPost = () => {
         </div>
       </blockquote>
 
-      <Script
-        src="https://www.instagram.com/embed.js"
-        strategy="lazyOnload"
-      />
-    </>
-  );
-};
-
-export default InstagramPost;

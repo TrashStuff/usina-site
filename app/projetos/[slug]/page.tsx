@@ -2,6 +2,7 @@ import { NavBar } from '@/app/NavBar'
 import fs from 'node:fs'
 import { loadContent } from '../loadContent'
 import { ReactNode } from "react";
+import { InstagramEmbed } from "./InstagramEmbed";
 
 export default async function Page({
   params,
@@ -46,6 +47,7 @@ export default async function Page({
       <div className="prose dark:prose-invert prose-lg md:prose-xl max-w-none prose-headings:font-light prose-headings:uppercase prose-h1:text-3xl prose-h2:text-xl prose-h3:text-xl prose-p:text-2xl prose-p:lg:text-4xl prose-li:text-2xl prose-li:lg:text-3xl prose-a:underline prose-a:font-light [> iframe]:max-w-full! [>iframe]:border-1 px-2 md:px-10 w-full pb-6">
         <Component />
       </div>
+      <InstagramEmbed />
     </div>
   );
 }
