@@ -2,25 +2,40 @@ export const metadata = {
   title: 'Pele Suja Minha Carne',
   tags: ['Sound Design', 'Curta-Metragem'],
   cliente: 'Produção Independente',
-  image: 'pele_suja_minha_carne.jpg',
+  image: 'pele.jpg',
   descricao: 'Curta de 13 minutos dirigido por Bruno Ribeiro. João toma banho após jogar futebol com seus amigos brancos, em um retrato sobre identidade, preconceito racial e sexualidade.',
   ano: '2016',
 }
 
-<div style={{ position: "relative", paddingTop: "56.25%", width: "100%" }}>
-  <iframe
-    src="https://www.youtube.com/embed/E8fblkh6nBw"
-    title="Pele Suja Minha Carne — YouTube player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
+<div style={{ maxWidth: "800px", margin: "0 auto" }}>
+  {/* Image */}
+  <img
+    src="/pele_suja_minha_carne.jpg"
+    alt="Pele Suja Minha Carne"
     style={{
-      position: "absolute",
-      inset: 0,
       width: "100%",
-      height: "100%"
+      height: "auto",
+      marginBottom: "1rem",
+      borderRadius: "8px",
+      objectFit: "cover"
     }}
   />
-</div>
 
+  {/* YouTube Video */}
+  <div style={{ position: "relative", paddingTop: "56.25%", width: "100%" }}>
+    <iframe
+      src="https://www.youtube.com/embed/E8fblkh6nBw"
+      title="Pele Suja Minha Carne — YouTube player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%"
+      }}
+    />
+  </div>
+</div>
