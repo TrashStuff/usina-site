@@ -2,7 +2,7 @@ import { NavBar } from "../NavBar";
 import { Metadata } from "next";
 
 const nosDescription =
-  "Usina reúne os trabalhos de Hugo Rocha e Miguel Mermelstein em som e múasica para projetos audiovisuais.";
+  "Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein. Criamos soluções sonoras para projetos audiovisuais. Produzimos músicas originais e cuidamos de todas as etapas de pós-produção de áudio para filmes, podcasts, publicidade, instalações e teatro.";
 
 export const metadata: Metadata = {
   title: "Nós | Usina",
