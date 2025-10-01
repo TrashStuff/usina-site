@@ -2,7 +2,7 @@ import { NavBar } from "../NavBar";
 import { Metadata } from "next";
 
 const nosDescription =
-"Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein.\n\n" +
+"Usina é uma produtora formada pela dupla <a href=\"https://cargocollective.com/hugorocha\" target=\"_blank\">Hugo Rocha</a> e Miguel Mermelstein.\n\n" +
   "Criamos soluções sonoras para projetos audiovisuais.\n\n" +
   "Produzimos trilhas sonoras e cuidamos de todas as etapas de finalização de áudio para filmes, podcasts, publicidade, instalações e teatro.";
 
