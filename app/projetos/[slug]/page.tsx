@@ -1,7 +1,6 @@
 import { NavBar } from '@/app/NavBar'
 import fs from 'node:fs'
-import { loadContent } from '../loadContent'
-import { ReactNode } from "react";
+import { loadContent } from "../loadContent";
 import { InstagramEmbed } from "./InstagramEmbed";
 
 export default async function Page({
@@ -16,53 +15,33 @@ export default async function Page({
   return (
     <div className="flex flex-col items-center">
       <NavBar currentPage="projeto" />
-      <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 w-full pb-10">
+      <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 w-full pb-10 px-10">
         <div>
-          <img
-            src={metadata.image}
-            alt={metadata.title}
-            className="w-full object-cover pointer-events-none saturate-20"
-          />
+          {metadata.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-block border border-gray-200 text-white text-xs font-semibold uppercase mr-2 px-2.5 py-2"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
-        <div className="flex flex-row gap-2 px-2">
-          <div className="flex flex-col justify-between gap-2 w-1/2">
-            <div className="flex flex-col gap-2">
-              <DataBlock label="Título">{metadata.title}</DataBlock>
-
-              <DataBlock label="Atividade">
-                {metadata.tags.join(", ")}
-              </DataBlock>
-            </div>
-            <div className="flex flex-col gap-2">
-              <DataBlock label="Cliente">{metadata.cliente}</DataBlock>
-
-              <DataBlock label="Ano">{metadata.ano}</DataBlock>
-            </div>
+        <div className="flex flex-col gap-2">
+          <div className="text-2xl lg:text-4xl font-light">
+            {metadata.title}
           </div>
-          <div className="w-1/2">
-            <DataBlock label="Descrição">{metadata.descricao}</DataBlock>
+          <div className="text-2xl">
+            {metadata.cliente ? `${metadata.cliente} | ` : ""}
+            {metadata.ano}
           </div>
+
+          <p className="text-base text-pretty">{metadata.descricao}</p>
         </div>
       </div>
       <div className="prose dark:prose-invert prose-lg md:prose-xl max-w-none prose-headings:font-light prose-headings:uppercase prose-h1:text-3xl prose-h2:text-xl prose-h3:text-xl prose-p:text-2xl prose-p:lg:text-4xl prose-li:text-2xl prose-li:lg:text-3xl prose-a:underline prose-a:font-light [> iframe]:max-w-full! [>iframe]:border-1 px-2 md:px-10 w-full pb-6">
         <Component />
       </div>
       <InstagramEmbed />
-    </div>
-  );
-}
-
-function DataBlock({
-  label,
-  children,
-}: {
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <div className="flex flex-col gap-1">
-      <div className="text-xs uppercase font-light">{label}</div>
-      <div className="text-2xl lg:text-4xl font-light">{children}</div>
     </div>
   );
 }

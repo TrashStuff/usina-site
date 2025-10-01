@@ -1,3 +1,5 @@
+import ReactPlayer from 'react-player'
+
 export const metadata = {
   title: 'Hoje é Um Novo Dia: Sonhar Juntos',
   tags: ['Desenho de Som', 'TV'],
@@ -7,14 +9,7 @@ export const metadata = {
   ano: '2019',
 }
 
-<iframe
-  width="674"
-  height="378"
-  src="https://www.youtube.com/embed/p7kydXctGEY"
-  frameBorder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<ReactPlayer src='https://www.youtube.com/embed/p7kydXctGEY' controls={false} width="100%" height="500px" rel={0} />
 
 ## Ficha Técnica
 
