@@ -60,7 +60,9 @@ type _AssertNoMissing = Missing extends never
   ? true
   : ["Faltando tags no CategoryMap:", Missing];
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const _assertNoExtra: _AssertNoExtra = true;
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const _assertNoMissing: _AssertNoMissing = true;
 
 type _AssertNoExtra = Extra extends never

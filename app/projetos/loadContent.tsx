@@ -22,7 +22,7 @@ export async function loadContent(fileName: string) {
     throw new Error(
       `\n\n\n ⚠️ As tags do projeto "${
         parsedMetadata.title
-      }" não possui uma tag que se encaixe em um filtro.\n\n${parsedMetadata.tags
+      }" ('./content/${fileName}.mdx') não possui uma tag que se encaixe em um filtro. Tags do projeto:\n\n${parsedMetadata.tags
         .map((tag) => `- ${tag}`)
         .join(
           "\n"
