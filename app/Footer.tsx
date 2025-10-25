@@ -9,7 +9,9 @@ const instagramUrl = "https://instagram.com/usina.sons";
 export function Footer() {
   return (
     <div className="container flex flex-col items-center justify-center z-10 my-20 mx-5 px-5 pt-2 border-t-2 border-slate-200">
-      <div>desenho de som | pós produção | música</div>
+      <div className="text-slate-100">
+        desenho de som | pós produção | música
+      </div>
       <div className="flex gap-2">
         <IconLink href={whatsAppUrl} title="WhatsApp">
           <WhatsAppIcon className="size-[22px]" />

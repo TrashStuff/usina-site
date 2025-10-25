@@ -93,15 +93,17 @@ export function ProjectsList({
             </h3>
             <div className="text-slate-100 md:text-black text-2xl md:text-lg p-4 md:p-0 font-light flex flex-col justify-around gap-4">
               <div>
-                <div className="text-sm">Atividade</div>
-                <div className="text-pretty truncate">
+                <div className="text-sm hidden md:block">Atividade</div>
+                <div className="text-pretty truncate text-base md:text-2xl">
                   {metadata.tags.join(", ")}
                 </div>
               </div>
               {metadata.cliente && (
                 <div>
                   <div className="text-sm">Cliente</div>
-                  <div className="font-normal">{metadata.cliente}</div>
+                  <div className="font-normal text-base md:text-2xl">
+                    {metadata.cliente}
+                  </div>
                 </div>
               )}
             </div>
