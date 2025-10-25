@@ -16,7 +16,7 @@ export default async function Page({
     <div className="flex flex-col items-center">
       <NavBar currentPage="projeto" />
       <div className="container grid grid-cols-1 gap-y-4 md:grid-cols-2 w-full pb-10 px-10 text-slate-100">
-        <div className="flex flex-wrap gap-1">
+        <div className="space-x-1 space-y-2">
           {metadata.tags.map((tag) => (
             <span
               key={tag}
