@@ -36,10 +36,7 @@ export default function Nos() {
             Produzimos trilhas sonoras e cuidamos de todas as etapas de
             finalização de áudio para filmes, podcasts, publicidade, instalações
             e teatro.
-          </p>
-          <p>
-            Hugo é formado em Rádio/TV na ECO/UFRJ e é um profissional com mais de 12 anos de experiência em som e audiovisual, com atuação em música, cinema, publicidade, podcasts e artes cênicas. Envolvido em dezenas de projetos em desenho de som, edição de áudio, produção musical, trilha sonora e finalização, seu trabalho combina precisão técnica com uma abordagem artística sensível. Atua também como coordenador de pós-produção, liderando equipes e supervisionando fluxos de trabalho, cronogramas e entregas para múltiplas plataformas. Atuou por 5 anos na Comunicação da Globo, fazendo a gestão de conteúdos audiovisuais para a marca, acompanhando projetos do roteiro à finalização. Teve uma trajetória como editor de vídeo e videomaker e foi fundador da Companhia Volante, realizando projetos autorais coletivos em performance e artes cênicas.
-          </p>
+          </p>    
         </div>
       </div>
     </div>
