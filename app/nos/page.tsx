@@ -28,7 +28,7 @@ export default function Nos() {
       <div className="container flex items-center justify-between pb-50 z-10 w-full">
         <div className="text-justify text-slate-100 bg-black bg-opacity-80 p-4 rounded font-sans text-base leading-7 md:text-2xl md:leading-9 max-w-4xl text-pretty z-10 text-shadow-lg flex flex-col gap-3">
           <p>
-            Usina é uma produtora formada pela dupla <a href=\"https://cargocollective.com/hugorocha\" target=\"_blank\">Hugo Rocha</a> e Miguel
+            Usina é uma produtora formada pela dupla Hugo Rocha e Miguel
             Mermelstein.
           </p>
           <p>Criamos soluções sonoras para projetos audiovisuais.</p>
