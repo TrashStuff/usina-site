@@ -12,6 +12,8 @@ export type TagsSemFiltros =
   | "Sound Design"
   | "Mixagem"
   | "Música Original"
+  | "Edição de Som"
+  | "Edição de Efeitos"
   | "Desenho de Som";
 
 export type Tag =
