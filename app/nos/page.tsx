@@ -36,7 +36,37 @@ export default function Nos() {
             Produzimos trilhas sonoras e cuidamos de todas as etapas de
             finalização de áudio para filmes, podcasts, publicidade, instalações
             e teatro.
-          </p>    
+          </p>
+          <p>
+         Hugo é formado em Rádio/TV na ECO/UFRJ e é um profissional com mais de
+            12 anos de experiência em som e audiovisual, com atuação em música,
+            cinema, publicidade, podcasts e artes cênicas. Envolvido em dezenas de
+            projetos em desenho de som, edição de áudio, produção musical, trilha
+            sonora e finalização, seu trabalho combina precisão técnica com uma
+            abordagem artística sensível. Atua também como coordenador de pós-produção,
+            liderando equipes e supervisionando fluxos de trabalho, cronogramas e
+            entregas para múltiplas plataformas. Atuou por 5 anos na Globo, 
+            fazendo a gestão de conteúdos audiovisuais para a marca, 
+            acompanhando projetos do roteiro à finalização. Teve uma 
+            trajetória como editor de vídeo e videomaker e foi fundador da 
+            Companhia Volante, realizando projetos autorais coletivos em 
+            performance e artes cênicas.
+          </p>
+          <p>
+       Miguel é formado em Música e Tecnologia pelo Conservatório Brasileiro de Música 
+            e atua há mais de 15 anos nas áreas de som, trilha sonora e pós-produção audiovisual. 
+            Atuou em estúdios e produtoras  de referência na música e nas artes como a Biscoito Fino, 
+            um dos estúdios mais tradicionais do país, colaborando com Chico Buarque, Maria Bethânia, 
+            Zeca Pagodinho, Alcione, e a Dellarte, uma das maiores empresas de produção cultural da América Latina, 
+            onde participou da gestão e realização de grandes eventos. Também assinou projetos para museus 
+            e instalações, entre eles o Museu do Carnaval de Salvador e o Museu do Automóvel CARDE. 
+            Com experiência que abrange cinema, publicidade, games, teatro e podcasts, já trabalhou 
+            em todas as etapas da cadeia de produção sonora — da captação e desenho de som à mixagem 
+            e finalização. Vencedor de dois prêmios de Melhor Desenho de Som (Melhor Sound Design 
+            no Cinefest Gato Preto e Best Sound Design no Play Short International Film Awards), 
+            seu trabalho busca unir precisão técnica e experimentação artística, explorando o som 
+            como elemento narrativo e expressivo.
+          </p>        
         </div>
       </div>
     </div>
