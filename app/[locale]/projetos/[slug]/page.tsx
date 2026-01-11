@@ -1,20 +1,22 @@
-import { NavBar } from '@/app/NavBar'
-import fs from 'node:fs'
-import { loadContent } from "../loadContent";
+import type { Metadata } from "next";
+import { Locale, locales } from "@/lib/i18n/config";
+import { buildLocalePath } from "@/lib/i18n/routing";
+import { getProjectSlugs, loadContent } from "../loadContent";
 import { InstagramEmbed } from "./InstagramEmbed";
+import { NavBar } from "../../NavBar";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+type ProjectPageProps = {
+  params: { locale: Locale; slug: string };
+};
 
-  const { Component, metadata } = await loadContent(slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug, locale } = params;
+
+  const { Component, metadata } = await loadContent(locale, slug);
 
   return (
     <div className="flex flex-col items-center">
-      <NavBar currentPage="projeto" />
+      <NavBar currentPage="projeto" locale={locale} />
       <div className="container grid grid-cols-1 gap-y-4 md:grid-cols-2 w-full pb-10 px-10 text-slate-100">
         <div className="space-x-1 space-y-2">
           {metadata.tags.map((tag) => (
@@ -49,32 +51,41 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  const files = fs.readdirSync("./content");
+  const slugs = getProjectSlugs();
 
-  const result = files.map((fileName) => ({ slug: fileName.split(".")[0] }));
-
-  return result;
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { locale: Locale; slug: string };
 }) {
-  const { slug } = await params;
+  const { slug, locale } = params;
 
-  const { metadata } = await loadContent(slug);
+  const { metadata } = await loadContent(locale, slug);
+
+  const languages = Object.fromEntries(
+    locales.map((item) => [item, buildLocalePath(item, `/projetos/${slug}`)])
+  );
+
+  const siteUrl = process.env.NEXT_PUBLIC_URL;
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? ""),
+    metadataBase: siteUrl ? new URL(siteUrl) : undefined,
     title: `${metadata.title} | Usina`,
     description: metadata.descricao,
+    alternates: {
+      languages,
+    },
     openGraph: {
       title: metadata.title,
       description: metadata.descricao,
       images: [metadata.image],
     },
-  };
+  } satisfies Metadata;
 }
 
-export const dynamicParams = false
+export const dynamicParams = false;

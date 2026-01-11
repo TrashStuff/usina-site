@@ -2,16 +2,16 @@ import { InstagramIcon } from "lucide-react";
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { EmailButton } from "./EmailButton";
+import { Locale } from "@/lib/i18n/config";
+import { t } from "../Translation";
 
 const whatsAppUrl = "https://wa.me/5521995055844";
 const instagramUrl = "https://instagram.com/usina.sons";
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
   return (
     <div className="container flex flex-col items-center justify-center z-10 my-20 mx-5 px-5 pt-2 border-t-2 border-slate-200">
-      <div className="text-slate-100">
-        desenho de som | pós produção | música
-      </div>
+      <div className="text-slate-100">{t({ locale, key: "soundDesign" })}</div>
       <div className="flex gap-2">
         <IconLink href={whatsAppUrl} title="WhatsApp">
           <WhatsAppIcon className="size-[22px]" />
@@ -19,7 +19,10 @@ export function Footer() {
         <IconLink href={instagramUrl} title="Instagram">
           <InstagramIcon size="23" />
         </IconLink>
-        <EmailButton className="bg-slate-900/20 text-slate-100 p-1 rounded-lg hover:bg-slate-700 transition-colors" />
+        <EmailButton
+          locale={locale}
+          className="bg-slate-900/20 text-slate-100 p-1 rounded-lg hover:bg-slate-700 transition-colors"
+        />
       </div>
     </div>
   );

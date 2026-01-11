@@ -1,12 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Category, categoryMap, Content } from "./types";
 import { useState } from "react";
+import { Locale } from "@/lib/i18n/config";
+import { buildLocalePath } from "@/lib/i18n/routing";
+import { Category, categoryMap, Content } from "./types";
+import { t } from "@/app/Translation";
 
 export function ProjectsList({
   content,
+  locale,
 }: {
+  locale: Locale;
   content: Omit<Content, "Component">[];
 }) {
   const [category, setCategory] = useState<Category | null>(null);
@@ -36,42 +41,42 @@ export function ProjectsList({
             active={category === "tv"}
             onClick={handleChangeCategory}
           >
-            TV
+            {t({ locale, key: "tv" })}
           </FilterButton>
           <FilterButton
             id="publicidade"
             active={category === "publicidade"}
             onClick={handleChangeCategory}
           >
-            Publicidade
+            {t({ locale, key: "ads" })}
           </FilterButton>
           <FilterButton
             id="cinema"
             active={category === "cinema"}
             onClick={handleChangeCategory}
           >
-            Cinema
+            {t({ locale, key: "cinema" })}
           </FilterButton>
           <FilterButton
             id="podcast"
             active={category === "podcast"}
             onClick={handleChangeCategory}
           >
-            Podcast
+            {t({ locale, key: "podcast" })}
           </FilterButton>
           <FilterButton
             id="outro"
             active={category === "outro"}
             onClick={handleChangeCategory}
           >
-            Outro
+            {t({ locale, key: "other" })}
           </FilterButton>
           <FilterButton
             id={null}
             active={category === null}
             onClick={handleChangeCategory}
           >
-            Ver todos
+            {t({ locale, key: "seeAll" })}
           </FilterButton>
         </div>
       </div>
@@ -79,15 +84,10 @@ export function ProjectsList({
       <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 w-full gap-y-10 md:gap-y-0">
         {visibleContent.map(({ metadata }) => (
           <Link
-            href={`/projetos/${metadata.slug}`}
+            href={buildLocalePath(locale, `/projetos/${metadata.slug}`)}
             key={metadata.slug}
             className="grow md:aspect-[3/4] h-full relative group md:bg-white md:flex flex-col justify-between pb-10 md:p-4 text-slate-900 md:min-w-[300px]"
           >
-            <img
-              src={metadata.image}
-              alt={metadata.title}
-              className="md:absolute max-h-80 aspect-[3/4] md:max-h-full top-0 left-0 h-full w-full object-cover pointer-events-none z-10 group-hover:opacity-0 transition-opacity"
-            />
             <h3 className="text-slate-100 md:text-black p-4 md:p-0 text-2xl md:text-4xl font-normal">
               {metadata.title}
             </h3>
@@ -107,6 +107,11 @@ export function ProjectsList({
                 </div>
               )}
             </div>
+            <img
+              src={metadata.image}
+              alt={metadata.title}
+              className="bg-black md:absolute max-h-80 aspect-[3/4] md:max-h-full top-0 left-0 h-full w-full object-cover pointer-events-none z-10 group-hover:opacity-0 transition-opacity"
+            />
           </Link>
         ))}
       </div>

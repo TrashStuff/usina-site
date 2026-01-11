@@ -13,8 +13,8 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...compat.config({
     rules: {
-      '@next/next/no-img-element': 'off',
-    }
+      "@next/next/no-img-element": "off",
+    },
   }),
 ];
 

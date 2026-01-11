@@ -3,6 +3,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.enable": false,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "i18n-ally.localesPaths": [
+    "lib/i18n"
+  ]
 }
