@@ -10,28 +10,32 @@ const languages = Object.fromEntries(
 
 const siteUrl = process.env.NEXT_PUBLIC_URL;
 
-export function generateMetadata({ params }: NosProps): Metadata {
+type NosProps = {
+  params: Promise<{ locale: Locale }>;
+};
+
+export async function generateMetadata({
+  params,
+}: NosProps): Promise<Metadata> {
+  const { locale } = await params;
+
   return {
-    title: `${t({ locale: params.locale, key: "us" })} | Usina`,
-    description: t({ locale: params.locale, key: "usDescription" }),
+    title: `${t({ locale, key: "us" })} | Usina`,
+    description: t({ locale, key: "usDescription" }),
     metadataBase: siteUrl ? new URL(siteUrl) : undefined,
     alternates: {
       languages,
     },
     openGraph: {
-      title: `${t({ locale: params.locale, key: "us" })} | Usina`,
-      description: t({ locale: params.locale, key: "usDescription" }),
+      title: `${t({ locale, key: "us" })} | Usina`,
+      description: t({ locale, key: "usDescription" }),
       images: ["/nos.jpg"],
     },
   };
 }
 
-type NosProps = {
-  params: { locale: Locale };
-};
-
-export default function Nos({ params }: NosProps) {
-  const { locale } = params;
+export default async function Nos({ params }: NosProps) {
+  const { locale } = await params;
 
   return (
     <div className="flex flex-col items-center h-screen">
@@ -92,10 +96,11 @@ export default function Nos({ params }: NosProps) {
             </>
           ) : (
             <>
-            <p>
-              Usina is a production company founded by the duo Hugo Rocha and Miguel Mermelstein.
-            </p>
-            <p>We create sound solutions for audiovisual projects.</p>
+              <p>
+                Usina is a production company founded by the duo Hugo Rocha and
+                Miguel Mermelstein.
+              </p>
+              <p>We create sound solutions for audiovisual projects.</p>
             </>
           )}
         </div>

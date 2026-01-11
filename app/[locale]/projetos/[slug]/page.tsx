@@ -6,12 +6,11 @@ import { InstagramEmbed } from "./InstagramEmbed";
 import { NavBar } from "../../NavBar";
 
 type ProjectPageProps = {
-  params: { locale: Locale; slug: string };
+  params: Promise<{ locale: Locale; slug: string }>;
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug, locale } = params;
-
+  const { slug, locale } = await params;
   const { Component, metadata } = await loadContent(locale, slug);
 
   return (
@@ -58,12 +57,8 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale; slug: string };
-}) {
-  const { slug, locale } = params;
+export async function generateMetadata({ params }: ProjectPageProps) {
+  const { slug, locale } = await params;
 
   const { metadata } = await loadContent(locale, slug);
 

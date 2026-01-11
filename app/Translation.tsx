@@ -12,9 +12,11 @@ export const translations = {
     seeAll: "Ver todos",
     soundDesign: "desenho de som | pós produção | música",
     usina: "USINA",
-    projects: "projetos",
+    projects: "Projetos",
+    projectsDescription: "Projetos desenvolvidos pela Usina",
     us: "Nós",
-    usDescription: "Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein. Criamos soluções sonoras para projetos audiovisuais.",
+    usDescription:
+      "Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein. Criamos soluções sonoras para projetos audiovisuais.",
   },
   en: {
     emailCopied: "Email copied to clipboard!",
@@ -27,9 +29,11 @@ export const translations = {
     seeAll: "See all",
     soundDesign: "sound design | post production | music",
     usina: "USINA",
-    projects: "projects",
+    projects: "Projects",
+    projectsDescription: "Projects developed by Usina",
     us: "Us",
-    usDescription: "Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein. Criamos soluções sonoras para projetos audiovisuais.",
+    usDescription:
+      "Usina é uma produtora formada pela dupla Hugo Rocha e Miguel Mermelstein. Criamos soluções sonoras para projetos audiovisuais.",
   },
 };
 

@@ -4,7 +4,7 @@ import { isLocale, locales } from "@/lib/i18n/config";
 
 type LocaleLayoutProps = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {

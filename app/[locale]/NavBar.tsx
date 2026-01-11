@@ -21,7 +21,7 @@ export function NavBar({
         {currentPage === "projetos" ? (
           <NavLink href={homeHref}>USINA</NavLink>
         ) : (
-          <NavLink href={projetosHref}>
+          <NavLink href={projetosHref} className="lowercase">
             {t({ locale, key: "projects" })}
           </NavLink>
         )}
@@ -31,7 +31,9 @@ export function NavBar({
         {currentPage === "nos" ? (
           <NavLink href={homeHref}>USINA</NavLink>
         ) : (
-          <NavLink href={nosHref} className="lowercase">{t({ locale, key: "us" })}</NavLink>
+          <NavLink href={nosHref} className="lowercase">
+            {t({ locale, key: "us" })}
+          </NavLink>
         )}
 
         <LanguageLink locale={locale} />

@@ -4,7 +4,7 @@ import { ScatterText } from "./ScatterText";
 import { Footer } from "./Footer";
 
 type HomeProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 import { t } from "../Translation";
@@ -14,9 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_URL;
 
 export async function generateMetadata({
   params,
-}: {
-  params: { locale: Locale };
-}): Promise<Metadata> {
+}: HomeProps): Promise<Metadata> {
   const { locale } = await params;
 
   return {

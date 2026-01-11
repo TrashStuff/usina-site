@@ -4,25 +4,32 @@ import { Locale, locales } from "@/lib/i18n/config";
 import { buildLocalePath } from "@/lib/i18n/routing";
 import { getProjectSlugs, loadContent } from "./loadContent";
 import { ProjectsList } from "./ProjectsList";
+import { t } from "@/app/Translation";
 
 const projectsLanguages = Object.fromEntries(
   locales.map((locale) => [locale, buildLocalePath(locale, "/projetos")])
 );
 
-export const metadata: Metadata = {
-  title: "Projetos | Usina",
-  description: "Projetos desenvolvidos pela Usina",
-  alternates: {
-    languages: projectsLanguages,
-  },
-};
+export async function generateMetadata({
+  params,
+}: ProjetosProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    title: `${t({ locale, key: "projects" })} | Usina`,
+    description: t({ locale, key: "projectsDescription" }),
+    alternates: {
+      languages: projectsLanguages,
+    },
+  };
+}
 
 type ProjetosProps = {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 };
 
 export default async function Projetos({ params }: ProjetosProps) {
-  const { locale } = params;
+  const { locale } = await params;
 
   const slugs = getProjectSlugs();
 
